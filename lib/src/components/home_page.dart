@@ -8,9 +8,31 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var controller = HomeController.of(context);
     return Scaffold(
-      appBar: AppBar(title: Text('Home')),
-      body: Center(
-        child: Center(child: Text('Contagem: ${controller.value}')),
+      appBar: AppBar(title: Text('Curs flutter')),
+      body: SizedBox(
+        width: double.infinity,
+        height: double.infinity,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: 80,
+              height: 80,
+              color: Colors.orange,
+            ),
+            Container(
+              width: 80,
+              height: 80,
+              color: Colors.green,
+            ),
+            Container(
+              width: 80,
+              height: 80,
+              color: Colors.blue,
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
