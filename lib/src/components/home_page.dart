@@ -12,26 +12,18 @@ class HomePage extends StatelessWidget {
       body: SizedBox(
         width: double.infinity,
         height: double.infinity,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Container(
-              width: 80,
-              height: 80,
-              color: Colors.orange,
-            ),
-            Container(
-              width: 80,
-              height: 80,
-              color: Colors.green,
-            ),
-            Container(
-              width: 80,
-              height: 80,
-              color: Colors.blue,
-            ),
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              for (var i = 0; i < 10; i++)
+                Container(
+                  width: double.infinity,
+                  height: 80,
+                  color: Colors.orange,
+                  margin: const EdgeInsets.all(12),
+                ),
+            ],
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
