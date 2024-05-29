@@ -7,19 +7,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var controller = HomeController.of(context);
+    final names = ["klayver", "janny", "lara", "jander", "iris", "maria rita"];
     return Scaffold(
-      appBar: AppBar(title: Text('Curs flutter')),
+      appBar: AppBar(title: Text('Curso flutter')),
       body: SizedBox(
         width: double.infinity,
         height: double.infinity,
         child: ListView.builder(
-          itemCount: 10,
+          itemCount: names.length,
           itemBuilder: (context, index) {
-            return Container(
-              width: double.infinity,
-              height: 80,
-              color: Colors.orange,
-              margin: const EdgeInsets.all(12),
+            return ListTile(
+              title: Text(names[index]),
             );
           },
         ),
